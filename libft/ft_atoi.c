@@ -16,24 +16,21 @@ int	ft_atoi(const char *nptr)
 {
 	int	sign;
 	int	result;
-	int	i;
 
-	i = 0;
 	sign = 1;
 	result = 0;
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == ' ')
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	while ((*nptr >= 9 && *nptr <= 13) || *nptr == ' ')
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
 	{
-		if (nptr[i] == '-')
+		if (*nptr++ == '-')
 			sign *= -1;
-		i++;
 	}
-	while (ft_isdigit(nptr[i]))
+	while (ft_isdigit(*nptr))
 	{
 		result *= 10;
-		result += nptr[i] - '0';
-		i++;
+		result += *nptr - '0';
+		nptr++;
 	}
 	return (result * sign);
 }
