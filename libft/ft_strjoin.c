@@ -6,12 +6,11 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:48:49 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/14 15:48:49 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/15 16:08:20 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

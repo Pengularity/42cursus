@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:41:59 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/14 16:41:59 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/15 16:09:53 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_nb_len(int nb)
 
 char	*ft_itoa(int n)
 {
-	int	len;
+	int		len;
 	char	*str;
 
 	len = ft_nb_len(n);

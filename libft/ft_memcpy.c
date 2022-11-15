@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:07:53 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/13 21:07:53 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/15 16:09:13 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char 		*d_ptr;
+	unsigned char		*d_ptr;
 	const unsigned char	*s_ptr;
 
 	d_ptr = dest;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wnguyen <wnguyen@student.42.fr>              +#+  +:+       +#+        */
+/*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/13 20:53:45 by wnguyen            #+#    #+#             */
-/*   Updated: 2022/11/13 20:53:45 by wnguyen          ###   ########.fr       */
+/*   Created: 2022/11/13 20:53:45 by wnguyen           #+#    #+#             */
+/*   Updated: 2022/11/15 16:10:24 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t number, size_t size)
 {
-	void *result;
+	void	*result;
 
 	result = malloc(number * size);
 	if (!result)
