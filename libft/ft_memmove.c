@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:08:04 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/13 21:08:04 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/15 18:47:54 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (dest > src)
 	{
 		while (n-- > 0)
-			*--d_ptr = *--s_ptr;
+			*(d_ptr + n) = *(s_ptr + n);
 	}
 	else
 	{
