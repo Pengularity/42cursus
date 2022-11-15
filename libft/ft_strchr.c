@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:08:17 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/15 16:08:52 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/15 17:19:35 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	while (*s++)
 	{
 		if (*s == c)
-			return (s);
+			return ((char *)s);
 	}
 	return (0);
 }

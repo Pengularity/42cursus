@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:07:39 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/15 16:09:38 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/15 17:18:10 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (n-- > 0)
 	{
 		if (*ptr == (unsigned char)c)
-			return (ptr);
+			return ((void *)ptr);
 		ptr++;
 	}
 	return (0);

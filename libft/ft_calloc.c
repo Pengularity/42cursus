@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 20:53:45 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/15 16:10:24 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/15 17:16:58 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	*ft_calloc(size_t number, size_t size)
 	result = malloc(number * size);
 	if (!result)
 		return (0);
-	ft_bzero(result, number * size),
+	ft_bzero(result, number * size);
 	return (result);
 }

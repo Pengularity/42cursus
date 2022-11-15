@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:10:09 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/15 16:13:18 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/15 17:16:29 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdlib.h>
 
 /* Part 1 */
 
