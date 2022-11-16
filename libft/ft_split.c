@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 16:35:54 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/16 17:34:53 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/16 17:39:34 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static size_t	ft_count_word(const char *s, char c)
 	return (count);
 }
 
-static void	ft_free(const char **s, char i)
+static void	ft_free(char **s, int i)
 {
 	while (i-- > 0)
 		free (s[i]);
