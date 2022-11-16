@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 16:35:54 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/16 17:39:34 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/16 18:08:28 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,6 @@ char	**ft_split(char const *s, char c)
 		s += wordlen;
 		i++;
 	}
-	result[count] = 0;
+	result[count] = '\0';
 	return (result);
 }
