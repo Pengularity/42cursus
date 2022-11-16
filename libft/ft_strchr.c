@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:08:17 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/15 19:04:56 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/16 20:37:20 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,19 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (str);
 }
+
+/* code qui valident les tests
+
+{
+	size_t i;
+	size_t len;
+
+	i = -1;
+	len = ft_strlen(s);
+	while (++i < len + 1)
+		if (s[i] == (char)c)
+			return (((void *)&((char *)s)[i]));
+	return (NULL);
+}
+
+*/
