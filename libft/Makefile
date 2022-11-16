@@ -6,7 +6,7 @@
 #    By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 16:26:14 by wnguyen           #+#    #+#              #
-#    Updated: 2022/11/15 17:28:25 by wnguyen          ###   ########.fr        #
+#    Updated: 2022/11/15 19:55:00 by wnguyen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ fclean : clean
 
 re : fclean all
 
-.c.o : $(SRC) $(INCLUDES)
+%.o : %.c $(SRC) $(INCLUDES)
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 $(NAME) : $(OBJ)
