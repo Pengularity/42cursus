@@ -25,7 +25,7 @@ static void	ft_free(char *s)
 	free(s);
 }
 
-static void ft_allocate(char **tab, const char *s, char c)
+static void	ft_allocate(char **tab, const char *s, char c)
 {
 	char		**pt;
 	const char	*str;
