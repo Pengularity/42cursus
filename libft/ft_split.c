@@ -83,7 +83,9 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s == c)
 			s++;
 		wordlen = ft_wordlen(s, c);
-		if (!(result[i] = ft_strndup(s, wordlen)))
+		result[i] = ft_strndup(s, wordlen);
+		if (!result)
+			return (0);
 		{
 			ft_free(result, i);
 			return (0);
