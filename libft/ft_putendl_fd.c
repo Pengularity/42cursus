@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 18:07:25 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/17 18:07:25 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/23 14:35:03 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
-	write (fd, '\n', 1);
+	ft_putchar_fd('\n', fd);
 }

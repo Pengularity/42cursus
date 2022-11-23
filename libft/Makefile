@@ -6,7 +6,7 @@
 #    By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 16:26:14 by wnguyen           #+#    #+#              #
-#    Updated: 2022/11/15 19:55:00 by wnguyen          ###   ########.fr        #
+#    Updated: 2022/11/23 14:38:29 by wnguyen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,6 @@ SRC = \
 	./ft_atoi.c \
 	./ft_calloc.c \
 	./ft_strdup.c \
-
 	./ft_substr.c \
 	./ft_strjoin.c \
 	./ft_strtrim.c \
@@ -56,7 +55,7 @@ SRC = \
 	./ft_putchar_fd.c \
 	./ft_putstr_fd.c \
 	./ft_putendl_fd.c \
-	./ft_putnbr.c \
+	./ft_putnbr_fd.c \
 	
 OBJ = $(SRC:.c=.o)
 
