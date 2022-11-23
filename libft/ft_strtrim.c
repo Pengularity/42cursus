@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:27:34 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/14 16:27:34 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/23 20:24:15 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,16 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	len;
-	char	*str;
+	char	*s2;
+	int		i;
 
-	while (*s1 && ft_strchr(set, *s1) != 0)
-		s1++;
-	len = ft_strlen(s1);
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (!str)
+	if (!s1 || !set)
 		return (0);
-	while (len && s1[len - 1] && ft_strchr(set, s1[len - 1]) != 0)
-		len--;
-	ft_memcpy(str, s1, len);
-	str[len] = '\0';
-	return (str);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	i = ft_strlen(s1);
+	while (i && ft_strchr(set, s1[i]))
+		i--;
+	s2 = ft_substr(s1, 0, i + 1);
+	return (s2);
 }
