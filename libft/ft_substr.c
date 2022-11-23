@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:19:45 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/23 18:52:57 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/23 20:41:02 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (0);
 	while (i < max)
 	{
-		str[i] = s[start];
+		str[i] = s[i + start];
 		i++;
-		start++;
 	}
 	str[i] = '\0';
 	return (str);
