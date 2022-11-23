@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 16:35:54 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/16 20:38:50 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/23 16:43:58 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,6 @@ char	**ft_split(char const *s, char c)
 	count = ft_count_word(s, c);
 	i = 0;
 	result = (char **)malloc(sizeof(char *) * (count + 1));
-	if (!result)
-		return (0);
 	while (i < count)
 	{
 		while (*s && *s == c)
@@ -85,7 +83,6 @@ char	**ft_split(char const *s, char c)
 		wordlen = ft_wordlen(s, c);
 		result[i] = ft_strndup(s, wordlen);
 		if (!result)
-			return (0);
 		{
 			ft_free(result, i);
 			return (0);
