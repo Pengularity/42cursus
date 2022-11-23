@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:09:49 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/15 18:32:32 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/23 17:16:01 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	slen;
+	size_t	i;
+	char	cc;
 
-	slen = ft_strlen(s);
-	while (slen && *(s + slen) != c)
-		slen--;
-	if (*(s + slen) == c)
-		return ((char *)(s + slen));
+	i = ft_strlen(s);
+	cc = (char)c;
+	if (!s)
+		return (0);
+	while (i > 0)
+	{
+		if (s[i] == cc)
+			return ((char *)(s + i));
+		i--;
+	}
+	if (s[i] == (char)c)
+		return ((char *)(s + i));
 	return (0);
 }
