@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:39:49 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/19 10:39:49 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/23 15:27:46 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	while (*lst)
 	{
 		tmp = (*lst)->next;
-		del(*lst)->content;
-		free(*lst);
+		ft_lstdelone(*lst, del);
 		*lst = tmp;
 	}
 	*lst = 0;

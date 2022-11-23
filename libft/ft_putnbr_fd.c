@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 18:13:07 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/17 18:13:07 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/23 16:12:09 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,6 @@ void	ft_putnbr_fd(int n, int fd)
 	unsigned int	nbr;
 
 	nbr = n;
-	if (n == -2147483648)
-	{
-		write(fd, "-2147483648", 11);
-	}
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
