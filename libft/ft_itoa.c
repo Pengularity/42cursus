@@ -6,51 +6,53 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:41:59 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/16 18:32:16 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/23 19:48:47 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_nb_len(int nb)
+static size_t	absolute(int nbr)
+{
+	if (nbr < 0)
+		return (-nbr);
+	return (nbr);
+}
+
+static size_t	get_len(int nbr)
 {
 	size_t	len;
 
 	len = 0;
-	if (nb < 0)
+	if (nbr <= 0)
 		len++;
-	while (nb)
+	while (nbr != 0)
 	{
-		nb /= 10;
 		len++;
+		nbr /= 10;
 	}
 	return (len);
 }
 
 char	*ft_itoa(int n)
 {
-	int		len;
-	char	*str;
+	char	*result;
+	size_t	len;
 
-	len = ft_nb_len(n);
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (!str)
+	len = get_len(n);
+	result = malloc(sizeof(char) * (len + 1));
+	if (!result)
 		return (0);
-	if (n == 0)
-		return (ft_strdup("0"));
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
+	result[len] = '\0';
 	if (n < 0)
+		result[0] = '-';
+	if (n == 0)
+		result[0] = '0';
+	while (n != 0)
 	{
-		str[0] = '-';
-		n = -n;
-	}
-	str[len--] = '\0';
-	while (n)
-	{
-		str[len] = n % 10 + '0';
 		len--;
-		n = n / 10;
+		result[len] = absolute(n % 10) + '0';
+		n /= 10;
 	}
-	return (str);
+	return (result);
 }

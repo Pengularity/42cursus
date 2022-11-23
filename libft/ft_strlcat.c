@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:08:30 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/15 17:45:51 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/23 18:20:50 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,24 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	srclen;
 	size_t	dstlen;
+	size_t	i;
+	size_t	j;
 
 	srclen = ft_strlen(src);
 	dstlen = ft_strlen(dst);
-	if (srclen < size - dstlen)
+	i = 0;
+	j = dstlen;
+	if (dstlen < (size -1) && size > 0)
 	{
-		ft_memcpy(dst + dstlen, src, srclen);
-		dst[dstlen + srclen] = '\0';
+		while (src[i] && (dstlen + i) < (size -1))
+		{
+			dst[j] = src[i];
+			i++;
+			j++;
+		}
+		dst[j] = '\0';
 	}
-	else
-	{
-		ft_memcpy(dst + dstlen, src, size - dstlen - 1);
-		dst[size - 1] = '\0';
-	}
+	if (dstlen >= size)
+		dstlen = size;
 	return (dstlen + srclen);
 }
