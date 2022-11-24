@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 21:07:53 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/23 18:03:04 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/24 17:59:55 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	if (!dest && !src)
 		return (0);
 	while (n-- > 0)
-	{
 		*d_ptr++ = *s_ptr++;
-	}
 	return (dest);
 }

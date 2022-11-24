@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 20:53:45 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/23 15:17:47 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/24 19:18:52 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (size == 0 || nmemb == 0)
 		return (malloc(0));
 	max = SIZE_MAX / size;
-	if (max > nmemb)
+	if (nmemb < max)
 		result = malloc(nmemb * size);
 	else
 		return (0);
