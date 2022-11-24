@@ -6,7 +6,7 @@
 #    By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 16:26:14 by wnguyen           #+#    #+#              #
-#    Updated: 2022/11/23 15:51:34 by wnguyen          ###   ########.fr        #
+#    Updated: 2022/11/24 20:12:10 by wnguyen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,7 @@ SRC_BONUS = \
 	./ft_lstdelone.c \
 	./ft_lstclear.c \
 	./ft_lstiter.c \
+	./ft_lstmap.c \
 	
 OBJ = $(SRC:.c=.o)
 
