@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 16:35:54 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/23 16:43:58 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/25 19:08:42 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,22 +48,14 @@ static void	ft_free(char **s, int i)
 	free (s);
 }
 
-static char	*ft_strndup(const char *s, size_t n)
+int	ft_free_word(char **result, size_t i)
 {
-	size_t	i;
-	char	*result;
-
-	result = (char *)malloc(sizeof(char) * (n + 1));
 	if (!result)
-		return (0);
-	i = 0;
-	while (i < n)
 	{
-		result[i] = s[i];
-		i++;
+		ft_free(result, i);
+		return (0);
 	}
-	result[i] = 0;
-	return (result);
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -75,20 +67,19 @@ char	**ft_split(char const *s, char c)
 
 	count = ft_count_word(s, c);
 	i = 0;
-	result = (char **)malloc(sizeof(char *) * (count + 1));
+	result = (char **) malloc ((sizeof(char *) * (count + 1)));
+	if (!result)
+		return (0);
 	while (i < count)
 	{
 		while (*s && *s == c)
 			s++;
 		wordlen = ft_wordlen(s, c);
-		result[i] = ft_strndup(s, wordlen);
-		if (!result)
-		{
-			ft_free(result, i);
+		result[i] = ft_substr(s, 0, wordlen);
+		if (!ft_free_word(result, i))
 			return (0);
-		}
-		s += wordlen;
 		i++;
+		s += wordlen;
 	}
 	result[count] = '\0';
 	return (result);
