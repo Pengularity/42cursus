@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 16:35:54 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/25 19:08:42 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/29 17:23:55 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ static size_t	ft_count_word(const char *s, char c)
 	size_t	count;
 
 	count = 0;
+	if (!s)
+		return (0);
 	while (*s)
 	{
 		if (*s != c)
@@ -81,7 +83,7 @@ char	**ft_split(char const *s, char c)
 		i++;
 		s += wordlen;
 	}
-	result[count] = '\0';
+	result[count] = NULL;
 	return (result);
 }
 
