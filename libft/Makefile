@@ -6,7 +6,7 @@
 #    By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 16:26:14 by wnguyen           #+#    #+#              #
-#    Updated: 2022/11/29 17:02:15 by wnguyen          ###   ########.fr        #
+#    Updated: 2022/11/29 17:36:42 by wnguyen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,3 +91,5 @@ $(NAME) : $(OBJ)
 
 bonus : $(OBJ) $(OBJ_BONUS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJ) $(OBJ_BONUS)
+
+.PHONY: all clean fclean re bonus
