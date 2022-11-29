@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 17:56:33 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/23 14:31:09 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/29 19:06:15 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i])
 	{
 		f(i, s + i);

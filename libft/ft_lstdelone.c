@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:30:38 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/24 19:31:44 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/11/29 18:54:13 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
+	if (!lst || !del)
+		return ;
 	if (lst)
 	{
 		(*del)(lst->content);
