@@ -6,13 +6,13 @@
 #    By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 16:26:14 by wnguyen           #+#    #+#              #
-#    Updated: 2022/11/24 20:12:10 by wnguyen          ###   ########.fr        #
+#    Updated: 2022/11/29 17:02:15 by wnguyen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
@@ -89,5 +89,5 @@ re : fclean all
 $(NAME) : $(OBJ)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 
-bonus : $(OBJ_BONUS)
-	$(AR) $(ARFLAGS) $(NAME) $(OBJ_BONUS)
+bonus : $(OBJ) $(OBJ_BONUS)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJ) $(OBJ_BONUS)
