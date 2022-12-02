@@ -6,7 +6,7 @@
 /*   By: wnguyen <wnguyen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 16:35:54 by wnguyen           #+#    #+#             */
-/*   Updated: 2022/11/29 17:23:55 by wnguyen          ###   ########.fr       */
+/*   Updated: 2022/12/02 20:54:56 by wnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,13 @@ static size_t	ft_count_word(const char *s, char c)
 static void	ft_free(char **s, int i)
 {
 	while (i-- > 0)
-		free (s[i]);
+	{
+		if (s[i])
+		{
+			free (s[i]);
+			s[i] = NULL;
+		}
+	}
 	free (s);
 }
 
@@ -91,7 +97,7 @@ char	**ft_split(char const *s, char c)
 
 #include "libft.h"
 
-static void	ft_allocate(char **tab, char const *s, char sep)
+static void	ft_allocate(char **tab, char const *s, char c)
 {
 	char		**tab_p;
 	char const	*tmp;
@@ -100,12 +106,12 @@ static void	ft_allocate(char **tab, char const *s, char sep)
 	tab_p = tab;
 	while (*tmp)
 	{
-		while (*s == sep)
+		while (*s == c)
 			++s;
 		tmp = s;
-		while (*tmp && *tmp != sep)
+		while (*tmp && *tmp != c)
 			++tmp;
-		if (*tmp == sep || tmp > s)
+		if (*tmp == c || tmp > s)
 		{
 			*tab_p = ft_substr(s, 0, tmp - s);
 			s = tmp;
@@ -115,18 +121,18 @@ static void	ft_allocate(char **tab, char const *s, char sep)
 	*tab_p = NULL;
 }
 
-static int	ft_count_words(char const *s, char sep)
+static int	ft_count_words(char const *s, char c)
 {
 	int	word_count;
 
 	word_count = 0;
 	while (*s)
 	{
-		while (*s == sep)
+		while (*s == c)
 			++s;
 		if (*s)
 			++word_count;
-		while (*s && *s != sep)
+		while (*s && *s != c)
 			++s;
 	}
 	return (word_count);
